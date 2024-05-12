@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.10.6/.schema/devbox.schema.json",
+  "packages": [
+    "bat@0.24.0",
+    "steampipe@0.22.2",
+    "teller@1.5.6",
+    "kind@0.22.0",
+    "azure-cli@2.58.0",
+    "gum@0.13.0",
+    "kubernetes-helm@3.14.4",
+    "timoni@0.21.0",
+    "jq@1.7.1"
+  ],
+  "shell": {
+    "init_hook": [
+      "alias cat='bat --paging never --theme DarkNeon --style plain'",
+      "PS1=\"➜ \""
+    ],
+    "scripts": {}
+  }
+}

@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-db-02-password
+data:
+  password: T1QrOXZQcDhMdXhoeFVQWVpLSk1kUG1YM04xTzBTd3YzWG5ZVjI0UFZzcz0=
+---
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: SQLClaim
+metadata:
+  name: my-db-02
+spec:
+  id: my-db-02
+  compositionSelector:
+    matchLabels:
+      provider: azure
+      db: postgresql
+  parameters:
+    version: "11"
+    size: small
+
