@@ -25,10 +25,7 @@ echo "export LOCATION=$LOCATION" >> .env
 
 az group create --name $RESOURCE_GROUP --location $LOCATION
 
-export KUBECONFIG=$PWD/kubeconfig-00.yaml
-echo "export KUBECONFIG=$KUBECONFIG" >> .env
-
-for INDEX in 00 01 02 03; do
+for INDEX in 01 02 03; do
 
     az aks create --resource-group $RESOURCE_GROUP \
         --name dot-$INDEX --node-count 1 \
